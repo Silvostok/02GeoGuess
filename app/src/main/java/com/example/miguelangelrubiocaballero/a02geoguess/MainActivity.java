@@ -24,11 +24,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         setGeoLocationDataAdapter();
         setupRecyclerView();
-
-
 
     }
 
@@ -40,18 +37,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mAdapter = new GeoObjectAdapter(mGeoObjects);
-
-
     }
 
     private void setupRecyclerView() {
-
 
         RecyclerView mGeoRecyclerView = findViewById(R.id.recyclerview);
 
         mGeoRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         mGeoRecyclerView.setAdapter(mAdapter);
-
 
         swipeController = new SwipeController(new SwipeControllerActions() {
 
