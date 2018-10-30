@@ -13,6 +13,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    // initialize variables
     SwipeController swipeController = null;
     GeoObjectAdapter mAdapter;
     private boolean isEurope = false;
@@ -29,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // setup Adapter for GeoLocation
     private void setGeoLocationDataAdapter() {
-
         mGeoObjects = new ArrayList<>();
         for (int i = 0; i < GeoObject.PRE_DEFINED_GEO_OBJECT_IMAGE_IDS.length; i++) {
             mGeoObjects.add(new GeoObject(i));
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new GeoObjectAdapter(mGeoObjects);
     }
 
+    // setup recycler view
     private void setupRecyclerView() {
 
         RecyclerView mGeoRecyclerView = findViewById(R.id.recyclerview);

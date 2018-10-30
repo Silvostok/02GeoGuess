@@ -2,23 +2,20 @@ package com.example.miguelangelrubiocaballero.a02geoguess;
 
 public class GeoObject {
 
-
+    // variables
     private int mGeoImageName;
     private boolean isEurope;
 
-
+    // getter & setters
     public int getmGeoImageName() {
         return mGeoImageName;
     }
-
     public void setmGeoImageName(int mGeoImageName) {
         this.mGeoImageName = mGeoImageName;
     }
-
     public boolean getIsEurope() {
         return isEurope;
     }
-
 
     public static final String[] PRE_DEFINED_GEO_OBJECT_NAMES = {
             "Denmark",
@@ -53,11 +50,10 @@ public class GeoObject {
             R.drawable.img8_no_thailand
     };
 
+    // constructor
     public GeoObject(int position) {
         this.mGeoImageName = PRE_DEFINED_GEO_OBJECT_IMAGE_IDS[position];
         this.isEurope = IS_IN_EUROPE[position];
     }
-
-
 
 }

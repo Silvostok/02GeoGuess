@@ -22,19 +22,16 @@ enum ButtonsState {
     RIGHT_VISIBLE
 }
 
+// This class is the contract between ItemTouchHelper and my application.
 
 public class SwipeController extends ItemTouchHelper.Callback {
 
-    private boolean swipeBack = false;
-
-    private ButtonsState buttonShowedState = ButtonsState.GONE;
-
-    private RectF buttonInstance = null;
-
-    private RecyclerView.ViewHolder currentItemViewHolder = null;
-
     private SwipeControllerActions buttonsActions = null;
 
+    private boolean swipeBack = false;
+    private ButtonsState buttonShowedState = ButtonsState.GONE;
+    private RectF buttonInstance = null;
+    private RecyclerView.ViewHolder currentItemViewHolder = null;
     private static final float buttonWidth = 300;
 
     public SwipeController(SwipeControllerActions buttonsActions) {
@@ -64,6 +61,7 @@ public class SwipeController extends ItemTouchHelper.Callback {
         return super.convertToAbsoluteDirection(flags, layoutDirection);
     }
 
+    // customize behavior
     @Override
     public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
         if (actionState == ACTION_STATE_SWIPE) {
