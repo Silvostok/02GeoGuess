@@ -11,14 +11,12 @@ import java.util.List;
 
 public class GeoObjectAdapter extends RecyclerView.Adapter<GeoObjectViewHolder>{
 
-    // Variables
    private Context context;
-
-    // list to store GeoObjects
-    public List<GeoObject> listGeoObject;
+   public List<GeoObject> listGeoObject;
 
     // Provide a suitable constructor (depends on the kind of dataset)
     public GeoObjectAdapter(List<GeoObject> listGeoObject) {
+
         this.listGeoObject = listGeoObject;
     }
 
@@ -34,11 +32,14 @@ public class GeoObjectAdapter extends RecyclerView.Adapter<GeoObjectViewHolder>{
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(@NonNull GeoObjectViewHolder holder, int position) {
+        // Gets a single item in the list from its position
         final GeoObject geoObject = listGeoObject.get(position);
+        // The holder argument is used to reference the views inside the viewHolder
+        // Populate the views with the data from the list
         holder.geoImage.setImageResource(geoObject.getmGeoImageName());
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    // Return the size of the of de geo objects
     @Override
     public int getItemCount() {
         return listGeoObject.size();

@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < GeoObject.PRE_DEFINED_GEO_OBJECT_IMAGE_IDS.length; i++) {
             mGeoObjects.add(new GeoObject(i));
         }
-
         mAdapter = new GeoObjectAdapter(mGeoObjects);
     }
 
@@ -58,9 +57,8 @@ public class MainActivity extends AppCompatActivity {
                     mAdapter.notifyItemRemoved(position);
                     mAdapter.notifyItemRangeChanged(position, mAdapter.getItemCount());
                     Toast.makeText(MainActivity.this, "Yess correct",Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(MainActivity.this, "Not correct",Toast.LENGTH_SHORT).show();
-                }
+                } else
+                    Toast.makeText(MainActivity.this, "Not correct", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -71,9 +69,8 @@ public class MainActivity extends AppCompatActivity {
                     mAdapter.notifyItemRemoved(position);
                     mAdapter.notifyItemRangeChanged(position,mAdapter.getItemCount());
                     Toast.makeText(MainActivity.this,"Yess correct",Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(MainActivity.this,"Not correct",Toast.LENGTH_SHORT).show();
-                }
+                } else
+                    Toast.makeText(MainActivity.this, "Not correct", Toast.LENGTH_SHORT).show();
 
             }
         });

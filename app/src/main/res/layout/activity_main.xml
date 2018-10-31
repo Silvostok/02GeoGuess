@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Can you guess if these streetview images are in Europe? Swipe the image left for Europe, right for not Europe."
+        android:text="@string/info_text"
         android:textColor="@android:color/holo_purple"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

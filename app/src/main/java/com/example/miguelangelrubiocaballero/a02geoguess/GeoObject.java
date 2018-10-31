@@ -1,10 +1,15 @@
 package com.example.miguelangelrubiocaballero.a02geoguess;
 
+
+/**
+ * this class will be the data model for each object that will be shown in our RecyclerView.
+ */
 public class GeoObject {
 
     // variables
     private int mGeoImageName;
     private boolean isEurope;
+
 
     // getter & setters
     public int getmGeoImageName() {
@@ -17,6 +22,9 @@ public class GeoObject {
         return isEurope;
     }
 
+    /**
+     *
+     */
     public static final String[] PRE_DEFINED_GEO_OBJECT_NAMES = {
             "Denmark",
             "Canada",
@@ -28,6 +36,9 @@ public class GeoObject {
             "Thailand"
     };
 
+    /**
+     *
+     */
     public static final boolean IS_IN_EUROPE[] = {
             true,
             false,
@@ -39,6 +50,10 @@ public class GeoObject {
             false
     };
 
+
+    /**
+     *
+     */
     public static final int[] PRE_DEFINED_GEO_OBJECT_IMAGE_IDS = {
             R.drawable.img1_yes_denmark,
             R.drawable.img2_no_canada,
@@ -50,6 +65,9 @@ public class GeoObject {
             R.drawable.img8_no_thailand
     };
 
+    /**
+     * @param position
+     */
     // constructor
     public GeoObject(int position) {
         this.mGeoImageName = PRE_DEFINED_GEO_OBJECT_IMAGE_IDS[position];
